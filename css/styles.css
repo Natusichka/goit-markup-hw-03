@@ -19,6 +19,21 @@
   --button-color: #188ce8;
   --additional-address-color: rgba(255, 255, 255, 0.6);
 }
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 body {
   color: var(--title-text-color);
   background-color: var(--primary-background-color);
@@ -31,8 +46,51 @@ body {
   list-style: none;
   font-style: normal;
 }
-/* Site nav */
+.link {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.button {
+  color: var(--title-text-color);
+  background-color: var(--additional-background-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* =============COMPONENTS=================== */
+
+/* =============HEADER======================= */
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border: 1px solid #ececec;
+}
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-navigation {
+  display: flex;
+  align-items: center;
+}
 .logo {
+  margin-right: 93px;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -48,12 +106,15 @@ body {
 .logo-white {
   color: var(--secondary-text-color);
 }
+.site-nav {
+  display: flex;
+  column-gap: 50px;
+}
 .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -62,41 +123,47 @@ body {
 .link.current {
   color: var(--accent-color);
 }
+.auth-nav {
+  display: flex;
+  column-gap: 50px;
+}
 .auth-nav .link {
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
 }
-/* Hero */
+/* =================HEADER================== */
+/* =================HERO==================== */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   color: var(--secondary-text-color);
   background-color: var(--secondary-background-color);
+  text-align: center;
 }
 .hero-title {
+  width: 696px;
+  margin-bottom: 28px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-/* Buttons */
-.button {
-  color: var(--title-text-color);
-  background-color: var(--additional-background-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  cursor: pointer;
+
+.hero-text {
+  display: block;
+  width: 696px;
 }
+
 .button.primary {
+  padding: 10px 26px 10px 25px;
+  width: 220px;
   color: var(--secondary-text-color);
   background-color: var(--button-color);
 }
@@ -104,10 +171,119 @@ body {
 .button.primary:focus {
   background-color: var(--accent-color);
 }
+/* ================HERO======================= */
+/* ================PECULARITIES=============== */
+.pecularities-section {
+  padding-top: 90px;
+  padding-bottom: 94px;
+}
+.pecularities {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+}
+.pecularity-card {
+  flex-basis: calc((100%-90px) / 4);
+}
+.pecularities-title {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.pecularities-title,
+.work-title {
+  line-height: 1.14;
+}
+.pecularities-text,
+.team-text,
+.portfolio-text {
+  color: var(--primary-text-color);
+  line-height: 1.7;
+}
+/* ================PECULARITIES=============== */
+/* ================OUR WORK=================== */
+.our-work {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.our-work-card {
+  flex-basis: calc((100%-60px) / 3);
+}
+.our-work-title,
+.our-team-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+/* =================OUR WORK=================== */
+/* =================OUR TEAM=================== */
+.our-team {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.our-team-card {
+  flex-basis: calc((100%-90px) / 4);
+}
+.team-photo {
+  margin-bottom: 30px;
+}
+.team-title.staff {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.team-text.staff {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.section .team {
+  background-color: var(--additional-background-color);
+}
+/* ==================OUR TEAM=================== */
+/* ==================PORTFOLIO================== */
+.buttons {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.our-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.portfolio-photo {
+  margin-bottom: 20px;
+}
+.portfolio-info{
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 20px 24px;
+}
+.portfolio-card {
+  flex-basis: calc((100%-180px) / 9);
+}
+.portfolio-title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.9;
+}
 .button.secondary {
+  padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--additional-background-color);
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -122,55 +298,21 @@ body {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
 }
-/* Sections */
-.pecularities-title {
-  text-transform: uppercase;
-  font-size: 14px;
-}
-.pecularities-title,
-.work-title {
-  line-height: 1.14;
-}
-.work-title,
-.team-title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-.team-title.staff {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-}
-.portfolio-title {
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.pecularities-text,
-.team-text,
-.portfolio-text {
-  color: var(--primary-text-color);
-  line-height: 1.7;
-}
-.team-text.staff {
-  font-size: 16px;
-  line-height: 1.19;
-}
-.portfolio-text {
-  font-size: 16px;
-  line-height: 1.9;
-}
-.section .team {
-  background-color: var(--additional-background-color);
-}
-/* Footer */
+/* ==================PORTFOLIO================== */
+/* ==================FOOTER===================== */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--secondary-background-color);
+}
+.address {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 .address .link {
   color: var(--secondary-text-color);
-  text-decoration: none;
 }
 .address-text.link {
   line-height: 1.71;
@@ -185,3 +327,4 @@ body {
 .address-text.color:focus {
   color: var(--accent-color);
 }
+/* ==================FOOTER====================== */
