@@ -142,25 +142,21 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  color: var(--secondary-text-color);
   background-color: var(--secondary-background-color);
   text-align: center;
 }
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
   width: 696px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
   text-transform: uppercase;
 }
-
-.hero-text {
-  display: block;
-  width: 696px;
-}
-
 .button.primary {
   padding: 10px 26px 10px 25px;
   width: 220px;
@@ -173,10 +169,6 @@ img {
 }
 /* ================HERO======================= */
 /* ================PECULARITIES=============== */
-.pecularities-section {
-  padding-top: 90px;
-  padding-bottom: 94px;
-}
 .pecularities {
   display: flex;
   align-items: start;
@@ -186,6 +178,7 @@ img {
   flex-basis: calc((100%-90px) / 4);
 }
 .pecularities-title {
+  padding-bottom: 10px;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -201,6 +194,9 @@ img {
 }
 /* ================PECULARITIES=============== */
 /* ================OUR WORK=================== */
+.work{
+  padding-top: 0;
+}
 .our-work {
   display: flex;
   flex-direction: row;
@@ -224,6 +220,9 @@ img {
   gap: 30px;
 }
 .our-team-card {
+  background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
   flex-basis: calc((100%-90px) / 4);
 }
 .team-photo {
@@ -241,7 +240,7 @@ img {
   line-height: 1.19;
   text-align: center;
 }
-.section .team {
+.team.section  {
   background-color: var(--additional-background-color);
 }
 /* ==================OUR TEAM=================== */
@@ -259,15 +258,14 @@ img {
   gap: 30px;
 }
 .portfolio-photo {
+  width: 367px;
   margin-bottom: 20px;
 }
-.portfolio-info{
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
+.portfolio-info {
   padding: 20px 24px;
 }
 .portfolio-card {
+  border: 1px solid #eeeeee;
   flex-basis: calc((100%-180px) / 9);
 }
 .portfolio-title {
@@ -300,13 +298,17 @@ img {
 }
 /* ==================PORTFOLIO================== */
 /* ==================FOOTER===================== */
+.logo.footer{
+  margin-right: 0;
+  margin-bottom: 20px;
+
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--secondary-background-color);
 }
 .address {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 9px;
