@@ -62,7 +62,6 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
-}
 img {
   display: block;
 }
@@ -327,6 +326,7 @@ img {
 /* ==================PORTFOLIO================== */
 /* ==================FOOTER===================== */
 .logo.bottom {
+  display: block;
   margin-right: 0;
   margin-bottom: 20px;
 }
