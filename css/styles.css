@@ -41,7 +41,7 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
-  background-color: var(--primary-background-color);
+  background-color: #fff;
 }
 .list {
   list-style: none;
@@ -62,6 +62,7 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+
 img {
   display: block;
 }
@@ -91,10 +92,10 @@ img {
 /* =============HEADER======================= */
 .page-header {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   border: 1px solid #ececec;
 }
-.page-header-container {
+.top-page {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -193,7 +194,7 @@ img {
 }
 /* ================HERO======================= */
 /* ================PECULARITIES=============== */
-.pecularities {
+.pecularities-list {
   display: flex;
   align-items: start;
   gap: 30px;
@@ -251,7 +252,7 @@ img {
   flex-basis: calc((100%-90px) / 4);
 }
 .team-photo {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .team-title.staff {
   margin-bottom: 10px;
@@ -259,6 +260,7 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  padding-bottom: 30px;
 }
 .team-text.staff {
   font-size: 16px;
@@ -282,16 +284,12 @@ img {
   align-items: center;
   gap: 30px;
 }
-.portfolio-photo {
-  width: 367px;
-  margin-bottom: 20px;
-}
 .portfolio-info {
   padding: 20px 24px;
 }
 .portfolio-card {
   border: 1px solid #eeeeee;
-  flex-basis: calc((100%-180px) / 9);
+  width: calc((100% - 60px) / 3);
 }
 .portfolio-title {
   margin-bottom: 4px;
